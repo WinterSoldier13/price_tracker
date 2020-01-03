@@ -15,7 +15,7 @@ from win10toast import ToastNotifier as toast
 
 # In[ ]:
 
-
+'''A path to store the previous data'''
 track={}
 if not exists("C://Users/"+str(getuser())+"/Documents/price_tracker/"):
     chdir("C://Users/"+str(getuser())+"/Documents/")
@@ -50,7 +50,7 @@ def execute(website,interval):
         track[website]= price
     if(previous_price>price):
         print('Whow! There is a price drop!! from '+str(previous_price)+' to '+str(price))
-        n.show_toast("There is a price drop!",icon='icon.ico',duration=12)
+        n.show_toast("There is a price drop!",icon='icon.ico',duration=12)  # You need to place an icon.ico in the same folder
     elif(previous_price==price):
               print('The price is still the same')
     else:
@@ -90,53 +90,7 @@ def checker():
 # In[ ]:
 
 
-checker()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
+if __name__ == "__main__":
+    checker()
 
 
